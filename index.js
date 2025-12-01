@@ -1,6 +1,4 @@
-// ==========================================
-// BillEase Landing Page JavaScript
-// ==========================================
+
 
 // ==========================================
 // DOM Content Loaded
@@ -10,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeSmoothScrolling();
     initializeFormValidation();
     initializeCartFunctionality();
-    initializeThemeToggle();
+    // initializeThemeToggle();
     initializeAnimations();
 });
 
@@ -443,47 +441,47 @@ function showCartNotification(message) {
 // ==========================================
 // Theme Toggle (Dark/Light Mode)
 // ==========================================
-function initializeThemeToggle() {
-    // Create theme toggle button
-    const themeToggle = document.createElement('button');
-    themeToggle.className = 'theme-toggle';
-    themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-    themeToggle.setAttribute('aria-label', 'Toggle theme');
-    themeToggle.style.position = 'fixed';
-    themeToggle.style.top = '20px';
-    themeToggle.style.right = '20px';
-    themeToggle.style.backgroundColor = 'black';
-    themeToggle.style.color = 'white';
-    themeToggle.style.border = 'none';
-    themeToggle.style.borderRadius = '50%';
-    themeToggle.style.width = '50px';
-    themeToggle.style.height = '50px';
-    themeToggle.style.cursor = 'pointer';
-    themeToggle.style.zIndex = '1000';
-    themeToggle.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
-    themeToggle.style.transition = 'all 0.3s ease';
+// function initializeThemeToggle() {
+//     // Create theme toggle button
+//     const themeToggle = document.createElement('button');
+//     themeToggle.className = 'theme-toggle';
+//     themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+//     themeToggle.setAttribute('aria-label', 'Toggle theme');
+//     themeToggle.style.position = 'fixed';
+//     themeToggle.style.top = '20px';
+//     themeToggle.style.right = '20px';
+//     themeToggle.style.backgroundColor = 'black';
+//     themeToggle.style.color = 'white';
+//     themeToggle.style.border = 'none';
+//     themeToggle.style.borderRadius = '50%';
+//     themeToggle.style.width = '50px';
+//     themeToggle.style.height = '50px';
+//     themeToggle.style.cursor = 'pointer';
+//     themeToggle.style.zIndex = '1000';
+//     themeToggle.style.boxShadow = '0 2px 10px rgba(0,0,0,0.2)';
+//     themeToggle.style.transition = 'all 0.3s ease';
 
-    document.body.appendChild(themeToggle);
+//     document.body.appendChild(themeToggle);
 
-    // Load saved theme
-    const savedTheme = localStorage.getItem('billeasy_theme') || 'light';
-    if (savedTheme === 'dark') {
-        document.body.classList.add('dark-theme');
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-    }
+//     // Load saved theme
+//     const savedTheme = localStorage.getItem('billeasy_theme') || 'light';
+//     if (savedTheme === 'dark') {
+//         document.body.classList.add('dark-theme');
+//         themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+//     }
 
-    // Toggle theme
-    themeToggle.addEventListener('click', function() {
-        document.body.classList.toggle('dark-theme');
-        const isDark = document.body.classList.contains('dark-theme');
+//     // Toggle theme
+//     themeToggle.addEventListener('click', function() {
+//         document.body.classList.toggle('dark-theme');
+//         const isDark = document.body.classList.contains('dark-theme');
 
-        // Update icon
-        themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+//         // Update icon
+//         themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
 
-        // Save theme preference
-        localStorage.setItem('billeasy_theme', isDark ? 'dark' : 'light');
-    });
-}
+//         // Save theme preference
+//         localStorage.setItem('billeasy_theme', isDark ? 'dark' : 'light');
+//     });
+// }
 
 // ==========================================
 // Animations and Effects
